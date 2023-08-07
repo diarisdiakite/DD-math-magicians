@@ -10,8 +10,6 @@
 - [Tech Stack](#tech-stack)
 - [Key Features](#key-features)
 
-🚀 [Live Demo](#live-demo)
-
 💻 [Getting Started](#getting-started)
 
 - [Setup](#setup)
@@ -73,15 +71,6 @@ Project-feature6: Application deploy
 ```
 
 [`Back to top`](#readme-top)
-
-## 🚀 <a name="live-demo"> Live Demo </a>
-
-You can access the Math-magicians at this link below.
-
-coming soon
-
-[`Back to top`](#readme-top)
-
 
 ## 💻 <a name="getting-started"> Getting Started </a>
 
