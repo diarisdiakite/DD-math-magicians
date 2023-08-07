@@ -4,6 +4,10 @@
   --my-gray: rgb(191, 189, 189);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .calculator {
   width: 60vw;
   height: 90vh;
@@ -39,7 +43,7 @@
 }
 
 .key {
-  width: 100%;
+  width: calc(25% - 1px);
   height: 100%;
   font-size: 20px;
   background-color: var(--my-lightGray);
@@ -49,7 +53,7 @@
 }
 
 .zero {
-  width: 200%;
+  width: calc(50% - 1px);
 }
 
 .operator {
