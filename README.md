@@ -121,8 +121,8 @@ You can deploy the Math-magicians application using: google cloud, Microsoft Azu
 
 👤 Didy
 
-GitHub: [@diarisd](github.com/diarisdiakite)
-<br> Twitter: [@diarisdiakite](www.twitter.com/diarisdiakite)
+GitHub: [@diarisd](https://github.com/diarisdiakite)
+<br> Twitter: [@diarisdiakite](https://www.twitter.com/diarisdiakite)
 <br> LinkedIn: [@diariatou-diakite](https://www.linkedin.com/in/diariatou-diakite-67ab80165/)
 <br><br>
 
