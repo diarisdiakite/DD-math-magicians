@@ -146,7 +146,7 @@ function Keypad({ handleClick, handleClear, handleCalculate }) {
         <button
           type="button"
           name="0"
-          className="key"
+          className="key zero"
           onClick={() => handleClick('0')}
         >
           0
@@ -155,14 +155,6 @@ function Keypad({ handleClick, handleClear, handleCalculate }) {
           type="button"
           name="."
           className="key"
-          onClick={() => handleClick('.')}
-        >
-          .
-        </button>
-        <button
-          type="button"
-          name="."
-          className="key operator"
           onClick={() => handleClick('.')}
         >
           .
