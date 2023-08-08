@@ -64,8 +64,8 @@ client: React, HTML, CSS and Javascript.
 
 ```
 Project-feature1: Create a new React application 
-Project-feature2: Uses componenets 
-Project-feature3: Uses props
+Project-feature2: Use components 
+Project-feature3: Use props
 Project-feature4: Create a full website
 Project-feature5: Test react application
 Project-feature6: Application deploy

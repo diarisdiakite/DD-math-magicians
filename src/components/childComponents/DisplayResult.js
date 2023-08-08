@@ -1,9 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function DisplayResult() {
+function DisplayResult({ result }) {
   return (
-    <div className="display">0</div>
+    <div className="display">
+      { result }
+    </div>
   );
 }
+
+DisplayResult.propTypes = {
+  result: PropTypes.string.isRequired,
+};
 
 export default DisplayResult;
