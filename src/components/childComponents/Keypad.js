@@ -32,9 +32,9 @@ function Keypad({ handleClick /* handleClear, handleCalculate  */ }) {
         </button>
         <button
           type="button"
-          name="+"
+          name="/"
           className="key operator"
-          onClick={() => handleClick('/')}
+          onClick={() => handleClick('÷')}
         >
           /
         </button>
