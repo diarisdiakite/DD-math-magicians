@@ -11,7 +11,6 @@ function DisplayResult({ result }) {
 
 DisplayResult.propTypes = {
   result: PropTypes.string.isRequired,
-  /* clickedButton: PropTypes.string.isRequired, */
 };
 
 export default DisplayResult;

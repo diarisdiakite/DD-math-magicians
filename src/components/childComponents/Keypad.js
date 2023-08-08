@@ -174,8 +174,6 @@ function Keypad({ handleClick /* handleClear, handleCalculate  */ }) {
 
 Keypad.propTypes = {
   handleClick: PropTypes.func.isRequired,
-  /* handleCalculate: PropTypes.func.isRequired,
-  handleClear: PropTypes.func.isRequired, */
 };
 
 export default Keypad;
