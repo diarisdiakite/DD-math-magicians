@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Keypad({ handleClick, handleClear, handleCalculate }) {
+function Keypad({ handleClick /* handleClear, handleCalculate  */ }) {
   return (
 
     <div className="keypad">
       <div className="row">
         <button
           type="button"
-          name="7"
+          name="AC"
           className="key"
-          onClick={handleClear}
+          onClick={() => handleClick('AC')}
         >
           AC
         </button>
@@ -66,11 +66,11 @@ function Keypad({ handleClick, handleClear, handleCalculate }) {
         </button>
         <button
           type="button"
-          name="+"
+          name="x"
           className="key operator"
-          onClick={() => handleClick('*')}
+          onClick={() => handleClick('x')}
         >
-          *
+          x
         </button>
       </div>
 
@@ -163,7 +163,7 @@ function Keypad({ handleClick, handleClear, handleCalculate }) {
           type="button"
           name="="
           className="key operator"
-          onClick={handleCalculate}
+          onClick={handleClick}
         >
           =
         </button>
@@ -174,8 +174,8 @@ function Keypad({ handleClick, handleClear, handleCalculate }) {
 
 Keypad.propTypes = {
   handleClick: PropTypes.func.isRequired,
-  handleCalculate: PropTypes.func.isRequired,
-  handleClear: PropTypes.func.isRequired,
+  /* handleCalculate: PropTypes.func.isRequired,
+  handleClear: PropTypes.func.isRequired, */
 };
 
 export default Keypad;

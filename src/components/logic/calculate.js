@@ -1,7 +1,7 @@
 import operate from './operate';
 
 function isNumber(item) {
-  return !!item.match(/[0-9]+/);
+  return typeof item === 'string' && !!item.match(/[0-9]+/);
 }
 
 /**
@@ -85,6 +85,50 @@ export default function calculate(obj, buttonName) {
       return { ...obj, total: (-1 * parseFloat(obj.total)).toString() };
     }
     return {};
+  }
+
+  /* if (['+', '-', '*', '/'].includes(buttonName)) {
+    if (!obj.next && obj.total !== null && isNumber(obj.total)) {
+      return { ...obj, operation: buttonName };
+    }
+
+    if (obj.operation && obj.total !== null && isNumber(obj.total) && obj.next !== null) {
+      return {
+        total: operate(obj.total, obj.next, obj.operation),
+        next: null,
+        operation: buttonName,
+      };
+    }
+
+    if (obj.operation && obj.total !== null && isNumber(obj.total) && obj.next === null) {
+      return {
+        total: obj.total,
+        next: null,
+        operation: buttonName,
+      };
+    }
+  } */
+
+  // Handle the case of chaining operations without entering numbers
+  if (!obj.next && obj.total) {
+    return { ...obj, operation: buttonName };
+  }
+
+  // User pressed an operation button and there is an existing operation
+  if (obj.operation) {
+    if (obj.total && !obj.next) {
+      return { ...obj, operation: buttonName };
+    }
+
+    if (!obj.total) {
+      return { total: 0, operation: buttonName };
+    }
+
+    return {
+      total: operate(obj.total, obj.next, obj.operation),
+      next: null,
+      operation: buttonName,
+    };
   }
 
   // Button must be an operation
