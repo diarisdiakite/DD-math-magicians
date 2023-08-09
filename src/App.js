@@ -1,15 +1,29 @@
 import React from 'react';
-import Calculator from './components/Calculator';
-import Quotes from './components/Quotes';
+import {
+  BrowserRouter, Routes, Route, Outlet,
+} from 'react-router-dom';
+import CalculatorPage from './components/pages/CalculatorPage';
+
+function Layout() {
+  return (
+    <>
+      <h1>Layout</h1>
+      <Outlet />
+    </>
+  );
+}
 
 function App() {
   return (
-    <main className="App">
-      <section className="container">
-        <Quotes />
-        <Calculator />
-      </section>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<div>Home page</div>} />
+          <Route path="about" element={<CalculatorPage />} />
+          <Route path="*" element={<div>If page not found it goes here</div>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
