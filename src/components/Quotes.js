@@ -4,10 +4,8 @@ import RenderQuotes from './childComponents/RenderQuotes';
 
 function Quotes() {
   const [quotes, setQuotes] = useState([]);
-
-  function handleFetchError(error) {
-    throw new Error(`Error fetching quotes:, ${error}`);
-  }
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const names = ['inspirational', 'intelligence', 'knowledge'];
@@ -18,14 +16,30 @@ function Quotes() {
       headers: { 'X-Api-Key': `${apiKey}` },
     })
       .then((resp) => resp.json())
-      .then((json) => setQuotes(json))
-      .catch((error) => handleFetchError(error));
+      .then((json) => {
+        setQuotes(json);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        setLoading(false);
+      });
   }, []);
 
+  let content;
+  if (loading) {
+    <p>Loading...</p>;
+  } else if (error) {
+    <p>
+      Error:
+      {error.message}
+    </p>;
+  } else {
+    content = <RenderQuotes key={quotes.id} quotes={quotes} />;
+  }
+
   return (
-    <div className="quotes">
-      <RenderQuotes key={quotes.id} quotes={quotes} />
-    </div>
+    <div className="quotes">{content}</div>
   );
 }
 
