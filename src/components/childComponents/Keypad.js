@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Keypad({ handleClick /* handleClear, handleCalculate  */ }) {
+function Keypad({ handleClick }) {
   return (
 
     <div className="keypad">

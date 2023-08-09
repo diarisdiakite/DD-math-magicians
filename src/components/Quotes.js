@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
 import RenderQuotes from './childComponents/RenderQuotes';
 
 function Quotes() {
@@ -15,7 +14,12 @@ function Quotes() {
     fetch(`https://api.api-ninjas.com/v1/quotes?category=${randomCategory}`, {
       headers: { 'X-Api-Key': `${apiKey}` },
     })
-      .then((resp) => resp.json())
+      .then((resp) => {
+        if (!resp.ok) {
+          throw new Error('Failed to fetch quotes');
+        }
+        return resp.json();
+      })
       .then((json) => {
         setQuotes(json);
         setLoading(false);
@@ -24,16 +28,14 @@ function Quotes() {
         setError(error);
         setLoading(false);
       });
-  }, []);
+  }, [error]);
 
   let content;
   if (loading) {
     <p>Loading...</p>;
   } else if (error) {
-    <p>
-      Error:
-      {error.message}
-    </p>;
+    const errMessage = `Couldn't Fetch the quotes ${error}`;
+    return errMessage;
   } else {
     content = <RenderQuotes key={quotes.id} quotes={quotes} />;
   }
