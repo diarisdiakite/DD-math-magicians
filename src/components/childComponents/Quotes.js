@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import RenderQuotes from './childComponents/RenderQuotes';
+import RenderQuotes from './quotes/RenderQuotes';
 
 function Quotes() {
   const [quotes, setQuotes] = useState([]);
