@@ -8,8 +8,18 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quotes,
 .calculator {
-  width: 60vw;
+  width: 50%;
   height: 90vh;
   margin: 5% auto;
   border: 1px solid #ccc;
