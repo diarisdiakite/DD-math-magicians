@@ -6,9 +6,16 @@ function RenderQuotes({ quotes }) {
     <div>
       {quotes.map((quote) => (
         <div key={quote.id}>
-          <p>{quote.quote}</p>
+          <p>
+            Your takeaway
+            {' '}
+            {quote.category}
+            {' '}
+            quote
+          </p>
+          <h3>{quote.quote}</h3>
           <p>{quote.author}</p>
-          <p>{quote.category}</p>
+
         </div>
       ))}
     </div>

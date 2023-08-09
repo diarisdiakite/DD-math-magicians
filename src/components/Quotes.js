@@ -10,7 +10,6 @@ function Quotes() {
   }
 
   useEffect(() => {
-    // const category1 = Math.random['inspirational', 'intelligence', 'knowledge'];
     const names = ['inspirational', 'intelligence', 'knowledge'];
     const randomCategory = names[Math.floor(Math.random() * names.length)];
 
@@ -24,7 +23,7 @@ function Quotes() {
   }, []);
 
   return (
-    <div>
+    <div className="quotes">
       <RenderQuotes key={quotes.id} quotes={quotes} />
     </div>
   );
