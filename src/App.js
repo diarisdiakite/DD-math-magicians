@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<div>Home page</div>} />
+          <Route index element={<CalculatorPage />} />
           <Route path="about" element={<CalculatorPage />} />
           <Route path="*" element={<div>If page not found it goes here</div>} />
         </Route>
