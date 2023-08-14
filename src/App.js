@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter, Routes, Route,
+  MemoryRouter, Routes, Route,
 } from 'react-router-dom';
 import Header from './components/pagesComponents/Header';
 import HomePage from './components/pages/HomePage';
@@ -10,7 +10,7 @@ import ContactPage from './components/pages/ContactPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <MemoryRouter>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -18,7 +18,7 @@ function App() {
         <Route path="/quote" element={<QuotePage />} />
         <Route path="*" element={<ContactPage />} />
       </Routes>
-    </BrowserRouter>
+    </MemoryRouter>
   );
 }
 
