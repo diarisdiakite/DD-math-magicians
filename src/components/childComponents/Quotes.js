@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import RenderQuotes from './childComponents/RenderQuotes';
+import RenderQuotes from './quotes/RenderQuotes';
 
 function Quotes() {
   const [quotes, setQuotes] = useState([]);
@@ -35,13 +35,19 @@ function Quotes() {
     <p>Loading...</p>;
   } else if (error) {
     const errMessage = `Couldn't Fetch the quotes ${error}`;
-    return errMessage;
+    return (
+      <p>
+        {' '}
+        {errMessage}
+        {' '}
+      </p>
+    );
   } else {
-    content = <RenderQuotes key={quotes.id} quotes={quotes} />;
+    content = <RenderQuotes key={quotes[0].id} quotes={quotes} />;
   }
 
   return (
-    <div className="quotes">{content}</div>
+    <div className="main-container">{content}</div>
   );
 }
 

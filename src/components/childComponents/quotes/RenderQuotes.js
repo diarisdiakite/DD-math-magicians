@@ -13,8 +13,8 @@ function RenderQuotes({ quotes }) {
             {' '}
             quote
           </p>
-          <h3>{quote.quote}</h3>
-          <p>{quote.author}</p>
+          <h3 key={`quote-${quote.id}`}>{quote.quote}</h3>
+          <p key={`author-${quote.id}`}>{quote.author}</p>
 
         </div>
       ))}

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './css/Calculator.css';
-import Keypad from './childComponents/Keypad';
-import DisplayResult from './childComponents/DisplayResult';
-import calculate from './logic/calculate';
+import '../../assets/css/calculator.css';
+import Keypad from './calculator/Keypad';
+import DisplayResult from './calculator/DisplayResult';
+import calculate from '../logic/calculate';
 
 function Calculator() {
   const [isResultDisplayed, setIsResultDisplayed] = useState(false);
