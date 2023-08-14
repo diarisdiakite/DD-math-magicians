@@ -13,18 +13,23 @@
   height: 100vh;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .quotes,
 .calculator {
   width: 50%;
-  height: 90vh;
-  margin: 5% auto;
+  height: 80vh;
+  margin: 3% auto;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.aside-calculator{
+  width: 50%;
+  margin: 3% auto;
 }
 
 .display {

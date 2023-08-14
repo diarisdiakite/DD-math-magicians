@@ -28,19 +28,27 @@ function Quotes() {
         setError(error);
         setLoading(false);
       });
-  }, []);
+  }, [error]);
 
   let content;
   if (loading) {
-    content = <p>Loading...</p>;
+    <p>Loading...</p>;
   } else if (error) {
     const errMessage = `Couldn't Fetch the quotes ${error}`;
-    content = <p>{errMessage}</p>;
+    return (
+      <p>
+        {' '}
+        {errMessage}
+        {' '}
+      </p>
+    );
   } else {
     content = <RenderQuotes key={quotes[0].id} quotes={quotes} />;
   }
 
-  return <div className="quotes">{content}</div>;
+  return (
+    <div className="main-container">{content}</div>
+  );
 }
 
 export default Quotes;

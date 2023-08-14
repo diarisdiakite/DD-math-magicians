@@ -15,7 +15,7 @@ function Header() {
             <NavLink to="/calculator" className="nav-link">Calculator</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/quote" className="nav-link" style={({ isActive }) => (isActive ? ({ color: 'red' }) : {})}>Quote</NavLink>
+            <NavLink to="/quote" className="nav-link">Quote</NavLink>
           </li>
         </ul>
       </nav>

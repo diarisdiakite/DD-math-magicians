@@ -1,4 +1,4 @@
-.header{
+.header {
   width: 90vw;
   height: 10vh;
   margin: 0 auto;
@@ -10,7 +10,7 @@
   width: 50%;
 }
 
-nav{
+nav {
   width: 50%;
 }
 
@@ -20,7 +20,7 @@ nav{
   align-items: flex-end;
 }
 
-.nav-item{
+.nav-item {
   list-style-type: none;
   width: 20%;
   height: 100%;
@@ -29,11 +29,15 @@ nav{
   border-right: 1px solid black;
 }
 
-.nav-link{
+/* .nav-item:last-child {
+  border-right: none;
+}
+ */
+.nav-link {
   text-decoration: none;
   width: 100%;
 }
 
 .active {
-  color: red
+  color: red;
 }

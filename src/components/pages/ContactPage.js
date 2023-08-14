@@ -6,12 +6,12 @@ function ContactPage() {
 
   useEffect(() => {
     setTimeout(() => {
-      navigate(-1);
+      navigate('/');
     }, 10000);
   });
 
   return (
-    <div>
+    <div className="main-container">
       <h2>This Page is not found</h2>
       <p>
         Please contact us at
