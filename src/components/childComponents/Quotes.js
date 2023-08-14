@@ -36,7 +36,7 @@ function Quotes() {
   } else if (error) {
     const errMessage = `Couldn't Fetch the quotes ${error}`;
     return (
-      <p>
+      <p className="main-container">
         {' '}
         {errMessage}
         {' '}
