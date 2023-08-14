@@ -25,3 +25,16 @@ code {
     'Courier New',
     monospace;
 }
+
+.main-container {
+  width: 90vw;
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+}
+
+p{
+  font-weight: 400;
+  font-size: large;
+}
