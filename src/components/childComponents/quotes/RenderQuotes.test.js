@@ -3,7 +3,7 @@ import RenderQuotes from './RenderQuotes';
 
 describe('RenderQuotes component', () => {
   it('renders correctly', () => {
-    const quote = [
+    const quotes = [
       {
         id: 1878900,
         randomCategory: 'intelligence',
@@ -14,9 +14,13 @@ describe('RenderQuotes component', () => {
 
     const tree = renderer
       .create(
-        <RenderQuotes quotes={quote} />,
+        <RenderQuotes quotes={quotes} />,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
+
+    const firstQuote = quotes[0];
+    expect(firstQuote.id).toEqual(expect.any(Number));
+    expect(firstQuote.author).toEqual(expect.any(String));
   });
 });
