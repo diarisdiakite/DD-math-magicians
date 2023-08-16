@@ -27,7 +27,7 @@ RenderQuotes.propTypes = {
     PropTypes.shape({
       quote: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
-      category: PropTypes.string.isRequired,
+      category: PropTypes.string,
     }),
   ).isRequired,
 };

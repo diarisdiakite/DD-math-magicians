@@ -40,6 +40,9 @@ export default function calculate(obj, buttonName) {
         total: null,
       };
     }
+    /* if (obj.total === obj.total + obj.next && obj.operation === null) {
+      return 'Please clear the console to start an new operation';
+    } */
     return {
       next: buttonName,
       total: null,
