@@ -163,7 +163,7 @@ function Keypad({ handleClick }) {
           type="button"
           name="="
           className="key operator"
-          onClick={handleClick}
+          onClick={() => handleClick('=')}
         >
           =
         </button>

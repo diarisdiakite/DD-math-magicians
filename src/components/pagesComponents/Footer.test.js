@@ -2,7 +2,7 @@ import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 import Footer from './Header';
 
-describe('Header component', () => {
+describe('Footer component', () => {
   it('renders correctly', () => {
     const tree = renderer
       .create(
