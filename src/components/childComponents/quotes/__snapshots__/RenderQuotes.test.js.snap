@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RenderQuotes component renders correctly 1`] = `
+<div>
+  <div>
+    <p>
+      Your takeaway
+       
+       
+      quote
+    </p>
+    <h3>
+      This is a test quote
+    </h3>
+    <p>
+      quote author
+    </p>
+  </div>
+</div>
+`;
