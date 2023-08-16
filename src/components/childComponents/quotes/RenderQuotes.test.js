@@ -7,7 +7,7 @@ describe('RenderQuotes component', () => {
       {
         id: 1878900,
         randomCategory: 'intelligence',
-        quote: 'This is a test quote',
+        quote: 'Development is an intersting journey',
         author: 'quote author',
       },
     ];

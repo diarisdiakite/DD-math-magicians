@@ -10,7 +10,7 @@ exports[`RenderQuotes component renders correctly 1`] = `
       quote
     </p>
     <h3>
-      This is a test quote
+      Development is an intersting journey
     </h3>
     <p>
       quote author
