@@ -1,18 +1,16 @@
-import renderer from 'react-test-renderer'
+import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
-import Header from "./Header";
-
-
+import Header from './Header';
 
 describe('Header component', () => {
   it('renders correctly', () => {
-      const tree = renderer
-        .create(
+    const tree = renderer
+      .create(
         <MemoryRouter>
           <Header />
-        </MemoryRouter>
-        )
-        .toJSON();
-      expect(tree).toMatchSnapshot();
-  });  
-})
+        </MemoryRouter>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
