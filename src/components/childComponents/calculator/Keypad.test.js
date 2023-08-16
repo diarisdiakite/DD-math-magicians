@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
-import Keypad from './Keypad';;
+import Keypad from './Keypad';
 
 describe('Header component', () => {
   it('renders correctly', () => {
